@@ -156,7 +156,37 @@ var myGroceryList = ['chips', 'pizza', 'hotpockets', 'MtnDew', 'corndogs'];
 */
 
 //Code Here
+//create function removeItem
+function removeItem(myGroceryList, item) {
+  //Check that both the list and the item are valid values.
+  if(!myGroceryList) {return [];}
+  if(!item) {return [];}
 
+  //look to see if the item is in the list.
+  let loctionOfItem = myGroceryList.indexOf(item);
+  //If the item is in the list remove it.
+  if (loctionOfItem != -1) {
+    myGroceryList.splice(loctionOfItem, 1);
+    return myGroceryList;
+  }
+  //if the item is not in the list return the list.
+  return myGroceryList;
+}
+
+function addItem(myGroceryList, item) {
+  //Check that both the list and the item are valid values.
+  if(!myGroceryList) {return [];}
+  if(!item) {return [];}
+
+  //If the item is already in the list then just return the list, 
+  //otherwise push the item onto the list and return it.
+  if(myGroceryList.includes(item)) {
+    return myGroceryList;
+  } else {
+    myGroceryList.push(item);
+    return myGroceryList;
+  }
+}
 
 
 ////////// PROBLEM 9 //////////
