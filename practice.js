@@ -252,7 +252,13 @@ var numbers = [5, '9', 16, 19, '25', '34', 48];
 */
   
 //Code Here
-
+function addTen(numbers) {
+  let temp = [];
+  numbers.forEach( number => {
+    temp.push(Number(number) + 10);
+  });
+  return temp;
+}
 
 
 ////////// PROBLEM 11 //////////
@@ -277,7 +283,13 @@ for(var i = 0; i < num2; i++){
 */
 
 //Code Here
-
+function longer(arr1, arr2) {
+  if (arr1.length > arr2.length) {
+    return arr1;
+  } else {
+    return arr2;
+  }
+}
 
 
 /*
@@ -290,7 +302,19 @@ for(var i = 0; i < num2; i++){
 
 //Code Here
 
-
+function both(arr1, arr2) {
+  let sameArray = [];
+  if(arr1.length > arr2.length) {
+    arr1.forEach(element => {
+      arr2.includes(element) ? sameArray.push(element) : false;
+    });
+  } else {
+      arr2.forEach(element => {
+        arr1.includes(element) ? sameArray.push(element) : false;
+      });
+  }
+  return sameArray;
+}
 
 ////////// PROBLEM 12 //////////
 
@@ -329,6 +353,12 @@ var colt = {
 */
 
 //Code Here
+devMountainEmployees.push(tyler);
+devMountainEmployees.push(cahlan);
+devMountainEmployees.push(ryan);
+devMountainEmployees.push(colt);
+
+console.log(devMountainEmployees.lenght);
 
 
 
@@ -338,7 +368,7 @@ var colt = {
 */
 
 //Code Here
-
+devMountainEmployees.splice(devMountainEmployees.indexOf(cahlan), 1);
 
 
 ////////// PROBLEM 13 //////////
@@ -350,7 +380,7 @@ var colt = {
 */
 
 //Code Here
-
+let users = [];
 
 
 /*
@@ -369,7 +399,22 @@ var user1 = {
 // Do not edit the code above.
 
 //Code Here
+let user2 = {
+  name: "Mark",
+  email: "mromero@gmail.com",
+  password: 'badPassword',
+  username: 'mromero'
+}
+let user3 = {
+  name: "Jolene",
+  email: "jojo@gmail.com",
+  password: 'goodPassword',
+  username: 'jojo'
+}
 
+users.push(user1);
+users.push(user2);
+users.push(user3);
 
 
 /*
@@ -383,7 +428,11 @@ var user1 = {
 */
 
 //Code Here
-
+for(let i = 0; i < users.length; i++) {
+  if(users[i].email === 'tylermcginnis33@gmail.com') {
+    users.splice(i, 1);
+  }
+}
 
 
 /*
